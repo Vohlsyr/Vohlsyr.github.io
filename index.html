@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Wrapido - Plats</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3p0RDVh3OBt86BVlVp2Hnj8m5qn9x/epfj4S1ELdkq3Bv0B5y4/gpLHZj" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -14,16 +13,16 @@
         </div>
     </header>
     
-    <main class="container mt-5">
-         <h1 class="main-title text-center mb-4">Repas</h1>
-         <div class="row">
+    <main>
+        <h1 class="main-title">Repas</h1>
+        <div class="product-container">
             <!-- Carte de produit pour le sandwich au thon -->
-            <div class="col-md-3 mb-4">
+            <div class="product-card">
                 <img src="images/wrap thon.jpeg" alt="Sandwich au thon">
                 <h2>Wrap au thon</h2>
                 <p class="price">3.5 €</p>
                 <p>Thon, mayonnaise, salade, concombres et tomates.</p>
-                <div class="card">
+                <div class="quantity-controls">
                     <button class="quantity-btn" onclick="changeQuantity('minus', 'thon')">-</button>
                     <input type="number" id="quantity-thon" class="quantity-input" value="0" min="0">
                     <button class="quantity-btn" onclick="changeQuantity('plus', 'thon')">+</button>
@@ -74,9 +73,7 @@
     <footer>
         <!-- Contenu du pied de page ici -->
     </footer>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doJ2ieOg6vmwGfXO2re/KJuv7yJDH7F3SLb+u/luyDoBZ9p7MIkkS7" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSd1jLrpzf82Ug7Bb8r2K2JJn9K9SITvUHH6eKHk/mu7/gel" crossorigin="anonymous"></script>
     <script src="script.js"></script>
+
 </body>
 </html>
