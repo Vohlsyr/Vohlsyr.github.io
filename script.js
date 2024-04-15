@@ -26,12 +26,56 @@ document.addEventListener('DOMContentLoaded', function() {
         
         const reservationDate = document.getElementById('reservation-date').value;
         const timeSlot = document.getElementById('time-slot').value;
-        const preOrderDetails = JSON.parse(localStorage.getItem('preOrder'));
+        const wrapDetails = localStorage.getItem('wrapDetails');
         
         let emailBody = `Date de réservation: ${reservationDate}%0D%0A`;
         emailBody += `Créneau horaire: ${timeSlot}%0D%0A`;
-        emailBody += `Détails de la pré-commande: ${JSON.stringify(preOrderDetails)}`;
+        emailBody += `Détails de la pré-commande: ${wrapDetails}`;
 
         window.location.href = `mailto:pidowrap@gmail.com?subject=Réservation%20Wrapido&body=${emailBody}`;
     });
 });
+
+
+function changeQuantity(action, product) {
+    var input = document.getElementById('quantity-' + product);
+    var currentValue = parseInt(input.value, 10);
+    if (action === 'plus') {
+        currentValue++;
+    } else if (action === 'minus' && currentValue > 0) {
+        currentValue--;
+    }
+    input.value = currentValue;
+    saveWrapDetails();
+
+    // Show the popup with the details
+    showWrapDetailsPopup();
+}
+
+function saveWrapDetails() {
+    const wraps = ['thon', 'poulet', 'vegetarien', 'saumon'];
+    let wrapDetails = {};
+
+    wraps.forEach(wrap => {
+        const quantity = document.getElementById('quantity-' + wrap).value;
+        if (quantity > 0) {
+            wrapDetails[wrap] = quantity;
+        }
+    });
+
+    localStorage.setItem('wrapDetails', JSON.stringify(wrapDetails));
+}
+function showWrapDetailsPopup() {
+    // Retrieve the wrap details from localStorage
+    const wrapDetails = localStorage.getItem('wrapDetails');
+    
+    // Show the popup with details
+    alert(`Current Wrap Details:\n${wrapDetails}`);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const preorderButton = document.querySelector('.preorder-btn');
+    preorderButton.addEventListener('click', saveWrapDetails);
+});
+
+

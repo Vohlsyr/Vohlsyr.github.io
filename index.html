@@ -11,10 +11,6 @@
             <a href="#" class="brand-name">Wrapido</a>
             <img src="images/Logo2.jpg" alt="Wrap Image" class="wrap-image">
         </div>
-        <div class="right-nav">
-            <a href="#">Who we are</a>
-            <a href="#" class="panier-btn">Mon panier</a>
-        </div>
     </header>
     
     <main>
@@ -77,18 +73,6 @@
     <footer>
         <!-- Contenu du pied de page ici -->
     </footer>
-    
-    <script>
-        function changeQuantity(action, product) {
-            var input = document.getElementById('quantity-' + product);
-            var currentValue = parseInt(input.value, 10);
-            if (action === 'plus') {
-                currentValue++;
-            } else if (action === 'minus' && currentValue > 0) {
-                currentValue--;
-            }
-            input.value = currentValue;
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
