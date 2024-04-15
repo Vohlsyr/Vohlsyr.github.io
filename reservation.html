@@ -9,13 +9,13 @@
     <header>
         <div class="left-nav">
             <a href="#" class="brand-name">Wrapido</a>
-            <img src="images/logo.png" alt="Wrap Image" class="wrap-image">
+            <img src="images/Logo2.jpg" alt="Wrap Image" class="wrap-image">
         </div>
     </header>
     
     <main>
         <h1>Veuillez finaliser votre commande en choisissant le créneau qui vous convient.</h1>
-        <form action="submit-reservation.php" method="post" id="reservation-form">
+        <form action="mailto:pidowrap@gmail.com" method="post" enctype="text/plain" id="reservation-form">
             <label for="reservation-date">Choisissez une date :</label>
             <input type="date" id="reservation-date" name="reservation_date" required>
             
@@ -23,7 +23,6 @@
             <select id="time-slot" name="time_slot" required>
                 <!-- Les options seront générées par JavaScript -->
             </select>
-            
             <input type="submit" value="Confirmer la réservation">
         </form>
     </main>

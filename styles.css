@@ -32,7 +32,7 @@ header .left-nav a {
 .wrap-image {
     height: 70px; /* Adjust the height as needed */
     width: auto;
-    margin-left: 20px; /* Space between the text and the image */
+    margin-left: 5px; /* Space between the text and the image */
     vertical-align: middle; /* Align it with the middle of the text */
 }
 
@@ -119,6 +119,7 @@ main .fresh {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.1);
     border-radius: 12px; /* Coins arrondis pour toute la carte */
     margin-bottom: 20px;
+    text-align: center;
     overflow: hidden; /* Empêche le débordement du contenu */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     /* Définissez une hauteur fixe pour la carte ou utilisez padding-bottom pour un ratio spécifique */

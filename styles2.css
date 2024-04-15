@@ -32,7 +32,7 @@ header .left-nav a {
 .wrap-image {
   height: 70px; /* Adjust the height as needed */
   width: auto;
-  margin-left: 20px; /* Space between the text and the image */
+  margin-left: 5px; /* Space between the text and the image */
   vertical-align: middle; /* Align it with the middle of the text */
 }
   
