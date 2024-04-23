@@ -47,9 +47,6 @@ function changeQuantity(action, product) {
     }
     input.value = currentValue;
     saveWrapDetails();
-
-    // Show the popup with the details
-    showWrapDetailsPopup();
 }
 
 function saveWrapDetails() {
