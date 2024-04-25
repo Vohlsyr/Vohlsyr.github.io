@@ -50,7 +50,7 @@ function changeQuantity(action, product) {
 }
 
 function saveWrapDetails() {
-    const wraps = ['thon', 'falafel', 'vegetarien', 'tofu'];
+    const wraps = ['thon', 'falafel', 'vegetarien', 'saumon'];
     let wrapDetails = {};
 
     wraps.forEach(wrap => {
